@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-
-        var num1 = parseInt(prompt ("numero 1"));
-        var num2 = parseInt(prompt ("numero 2"));
-        //metodo sumar
-        function sumar () {
-            return num1+num2;
-        }
-        //metodo resta
-        function resta () {
-            return num1-num2;
-        }
-        //metodo mult
-        function mult() {
-            return num1*num2;
-        }
-        //metodo div
-        function div () {
-            return num1/num2;
-        }
-
-    </script>
-</head>
-<body>
-    <input type="button" onclick="alert(sumar(num1,num2))" value="sumar">
-    <input type="button" onclick="alert(resta(num1,num2))" value="restar">
-    <input type="button" onclick="alert(div(num1,num2))" value="dividir">
-    <input type="button" onclick="alert(mult(num1,num2))" value="multiplicar">
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora</title>
+        <script>
+            var num1 = parseInt(prompt ("numero 1"));
+            var num2 = parseInt(prompt ("numero 2"));
+            //metodo sumar
+            function sumar () {
+                return num1+num2;
+            }
+            //metodo resta
+            function resta () {
+                return num1-num2;
+            }
+            //metodo mult
+            function mult() {
+                return num1*num2;
+            }
+            //metodo div
+            function div () {
+                return num1/num2;
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="alert(sumar(num1,num2))" value="sumar">
+        <input type="button" onclick="alert(resta(num1,num2))" value="restar">
+        <input type="button" onclick="alert(div(num1,num2))" value="dividir">
+        <input type="button" onclick="alert(mult(num1,num2))" value="multiplicar">
+    </body>
 </html>
