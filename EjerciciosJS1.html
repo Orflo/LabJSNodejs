@@ -5,33 +5,47 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Ejercicoos JS</title>
         <script>
-            //comparación
-            var num1 = parseInt(prompt ("numero 1"));
-            var num2 = parseInt(prompt ("numero 2"));
-            function comp (){
-                    if(num1 > num2){
-                        return num1+" es mayor que "+num2;
-                    }else if(num1 < num2){
-                        return num1+" es menor que "+num2;
-                    }else{
-                        return num1+" es igual a "+num2;
-                    }
-                }
+////////////////comparación///////////////////////////////////////////////////////////
+//            var num1 = parseInt(prompt ("numero 1"));
+//            var num2 = parseInt(prompt ("numero 2"));
+//            function comp (){
+//                    if(num1 > num2){
+//                        return num1+" es mayor que "+num2;
+//                    }else if(num1 < num2){
+//                        return num1+" es menor que "+num2;
+//                    }else{
+//                        return num1+" es igual a "+num2;
+//                    }
+//                }
 
-            //listas con bucle for
-            function listar (){
-                lista = [1, 2, 13, 4, 25];
-                num1 = 0
+////////////////listas con bucle for///////////////////////////////////////////////////
+//            function listar (){
+//                lista = [1, 2, 13, 4, 25];
+//                num1 = 0
+//                for(var i=0; i< lista.length; i++){
+//                    num2 = lista[i]
+//                    if(num2 > num1){
+//                        num1 = num2
+//                    }
+//                }
+//                alert(num1)
+//            }
+//            listar();
+
+//////////////listas con bucle for y ordenando números de menor a mayor//////////////
+            function order (){
+                lista = [3, 2, 13, 1, 5];
+                lista2 =[];
                 for(var i=0; i< lista.length; i++){
-                    num2 = lista[i]
-                    if(num2 > num1){
-                        num1 = num2
-                    }
+                    if(lista[i] > lista[i+1]){
+                        aux = lista[i+1]
+                        lista2[i] = aux
                 }
-                alert(num1)
+                alert(lista2)
             }
+        }
+            order();
 
-            listar();
         </script>
     </head>
     <body>
