@@ -17,6 +17,21 @@
                         return num1+" es igual a "+num2;
                     }
                 }
+
+            //listas con bucle for
+            function listar (){
+                lista = [1, 2, 13, 4, 25];
+                num1 = 0
+                for(var i=0; i< lista.length; i++){
+                    num2 = lista[i]
+                    if(num2 > num1){
+                        num1 = num2
+                    }
+                }
+                alert(num1)
+            }
+
+            listar();
         </script>
     </head>
     <body>
