@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicoos JS</title>
+        <script>
+            //comparación
+            var num1 = parseInt(prompt ("numero 1"));
+            var num2 = parseInt(prompt ("numero 2"));
+            function comp (){
+                    if(num1 > num2){
+                        return num1+" es mayor que "+num2;
+                    }else if(num1 < num2){
+                        return num1+" es menor que "+num2;
+                    }else{
+                        return num1+" es igual a "+num2;
+                    }
+                }
+        </script>
+    </head>
+    <body>
+        <input type="button" onclick="alert(comp(num1,num2))" value="comparar">
+    </body>
+</html>
