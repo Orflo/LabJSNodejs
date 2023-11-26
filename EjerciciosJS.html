@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JS</title>
+    <Script>
+        //Ejercicio 1: Saludo personalizado
+        alert("Ejercicio 1: Saludo personalizado")
+            var name = prompt("Introduzca su nombre")
+            alert("Bienvenido "+name)
+
+        //Ejercicio 2: Suma de Dos Números
+        alert("Ejercicio 2: Suma de Dos Números")
+            var num1 = parseInt(prompt ("Introduzca el primer número"))
+            var num2 = parseInt(prompt ("Introduzca el segundo número"))
+            var totalsuma = num1+num2
+            alert("El resultado es "+totalsuma)
+
+        //Ejercicio 3: Verificador de edad
+        alert("Ejercicio 3: Verificador de edad")
+            var edad = parseInt(prompt("Introduzca su edad"))
+            if(edad >= 18){
+                alert("Es mayor de edad")
+            }else{
+                alert("Es menor de edad")
+            }
+
+        //Ejercicio 4: Contador simple
+        alert("Ejercicio 4: Contador simple")
+            for(var i=1; i<=10; i++){
+                alert(i)
+                  }
+
+        //Ejercicio 5: Cálculo del Factorial
+        alert("Ejercicio 5: Cálculo del Factorial")
+            var num3 = parseInt(prompt("Introduzca un número para conocer su factorial"))
+            var factorial = 1
+            for(var i=1; i<=num3; i++){
+                factorial = factorial*i
+            }
+            alert("El factorial de "+num3+" es "+factorial)
+
+        //Ejercicio 6: Lista de la compra
+        alert("Ejercicio 6: Lista de la compra")
+            var listacompra = [];
+            for(var i=0; i<5; i++){
+                var item = prompt("Introduzca el producto")
+                listacompra.push(item)
+            }
+            alert(listacompra)
+
+        //Ejercicio 7: Números Pares e Impares
+        alert("Ejercicio 7: Números Pares e Impares")
+            for(var i=1; i<=10; i++){
+                if(i%2 == 0){
+                    alert(i+" es par")
+                }else{
+                    alert(i+" es impar")
+                }
+            }
+
+        //Ejercicio 8: Validador de contraseña
+        alert("Ejercicio 8: Validador de contraseña")
+            var pass = prompt("Introduza la contraseña")
+            if(pass.length > 6){
+                alert("La contraseña es válida")
+            }else{
+                alert("La contraseña NO es válida")
+            }
+
+        //Ejercicio 9: Adivina el numero
+        alert("Ejercicio 9: Adivina el numero")
+            var num4 = Math.floor(Math.random() * 10)+1;
+            alert(num4)
+            for(var i=1; i<=3; i++){
+                var respuesta = parseInt(prompt("Intento "+i+". Introduzca un número del 1 al 10"))
+                if(num4 == respuesta){
+                    alert("Felicidades!! Has acertado")
+                    break
+                }else if(i == 3){
+                    alert("Fin del juego, el numero correcto era "+num4)
+                }else{
+                    alert("No es correcto, intentalo otra vez")
+                }
+            }
+    </Script>
+</head>
+<body>
+    
+</body>
+</html>
