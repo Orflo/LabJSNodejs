@@ -8,4 +8,4 @@
 - EjerciciosJS1.html renombrado como EjerciciosClaseJS1.html
 - Añadido EjerciciosJS.html para realizar los ejercicios de la tarea
 ## 27/11/2023
-- Se crea una carpeta de node.js y dentro se añaden servidor.js, servidorbackup.js, leerfichero.js, archivo.txt para hacer practicas con node.js
+- Se crea una carpeta de node.js y dentro se añaden servidor.js, servidorbackup.js, leerfichero.js, archivo.txt para hacer practicas con node.js y se crea otra carpeta para los ejercicios de JavaScript 
