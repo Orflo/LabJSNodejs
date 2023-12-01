@@ -1,4 +1,4 @@
-# Ejercicios de JavaScript para iniciación a Node.JS
+# Ejercicios de JavaScript para iniciación a Node.JS y Proyecto Node.js
 
 ## 20/11/2023
 - ejemplo.html
