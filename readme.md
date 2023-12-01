@@ -15,3 +15,4 @@
 
 ## 01/12/2023
 - Se crea una carpeta ProyectoNodeJS y se inicia un projecto de una app
+- Se crea una carpeta ProyectoNodeJS2 y de inicia un projecto de una app con el modulo de Express JS
