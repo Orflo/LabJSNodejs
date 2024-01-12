@@ -16,3 +16,6 @@
 ## 01/12/2023
 - Se crea una carpeta ProyectoNodeJS y se inicia un projecto de una app
 - Se crea una carpeta ProyectoNodeJS2 y de inicia un projecto de una app con el modulo de Express JS
+
+## 12/01/2024
+- Se crea una carpeta ProyectoNodeJS3 y se inicia un proyecto de node con ExpressJS y nodemon
