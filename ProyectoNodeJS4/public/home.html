@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 5px 0;
+        }
+        a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+
+    <!-- Script para cargar datos dinámicamente -->
+    <script>
+        function loadComments() {
+            // Obtener todos los comentarios del servidor
+            fetch('/get-comments')
+                .then(response => response.json())
+                .then(data => {
+                    const comments = data.comments || [];
+
+                    // Limpiar el contenedor de comentarios
+                    const commentsContainer = document.getElementById('comments');
+                    commentsContainer.innerHTML = "";
+
+                    // Actualizar el contenido HTML con los comentarios
+                    comments.forEach(commentObj => {
+                        const p = document.createElement('p');
+                        p.innerText = commentObj.username + ': ' + commentObj.comment;
+                        commentsContainer.appendChild(p);
+                    });
+                });
+        }
+
+        window.onload = function () {
+            // Obtener el nombre de usuario actual del servidor
+            fetch('/get-username')
+                .then(response => response.json())
+                .then(data => {
+                    const username = data.username || "Invitado";
+
+                    // Actualizar el contenido HTML con el nombre de usuario
+                    document.getElementById('welcome').innerText = 'Bienvenido, ' + username + '!';
+
+                    // Cargar comentarios
+                    loadComments();
+                });
+        }
+    </script>
+</head>
+<body>
+    <h1 id="welcome"></h1>
+    
+    <h2>Comentarios:</h2>
+    <div id="comments"></div>
+
+    <a href="/write-comment">Escribir Comentario</a>
+    <br>
+    <a href="/">Logout</a>
+</body>
+</html>
+
