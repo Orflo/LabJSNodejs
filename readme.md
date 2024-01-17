@@ -19,3 +19,7 @@
 
 ## 12/01/2024
 - Se crea una carpeta ProyectoNodeJS3 y se inicia un proyecto de node con ExpressJS y nodemon
+- Se finaliza el mismo día
+
+## 17/01/2024
+- Se finaliza la carpeta ProyectoNodeJS4, que se inicio el 15/01/2024
