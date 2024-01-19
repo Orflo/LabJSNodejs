@@ -23,3 +23,6 @@
 
 ## 17/01/2024
 - Se finaliza la carpeta ProyectoNodeJS4, que se inicio el 15/01/2024
+
+## 19/01/2024
+- Se realiza y se finaliza el ProyectoNodeJS5 realizado en clase
