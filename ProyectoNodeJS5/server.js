@@ -74,12 +74,11 @@ app.get('/',function(req,res){
 //Creating GET Router to fetch all the learner details from the MySQL Database
 app.get('/passwords' , (req, res) => {
     mysqlConnection.query('SELECT * FROM passwords', (err, rows, fields) => {
-    if (!err) {
+      if (!err) {
         res.send(rows);
+      }else {
+        console.log(err);
+        console.log("pos no funciona");
     }
-    else {
-    console.log(err);
-    console.log("pos no funciona");
-    }
-    })
-    } );
+  })
+} );
