@@ -26,3 +26,9 @@
 
 ## 19/01/2024
 - Se realiza y se finaliza el ProyectoNodeJS5 realizado en clase
+
+## 22/01/2024
+- Se realiza y se finaliza ProyectoNodeJS6 realizado en clase
+
+## 26/01/2024
+- Se modifican formulario.html y server.js en ProyectoNodeJS6 para corregir errores
