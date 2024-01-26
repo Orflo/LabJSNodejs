@@ -26,7 +26,7 @@ db.connect((err) => {
 app.get('/',function(req,res){
     res.sendFile(path.join(__dirname+'/formulario.html'));
     //__dirname : It will resolve to your project folder.
-  });
+});
 
 // Middleware para procesar los datos del formulario
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -43,24 +43,26 @@ app.post('/insertardatos', (req, res) => {
     db.query(sql, values, (err, result) => {
         if (err) {
             console.error('Error al insertar datos en la base de datos: ', err);
-            res.status(500).send('Error interno del servidor');
+            // Mostrar alerta en el navegador
+            res.send('<script>alert("Error interno del servidor"); window.location="/";</script>');
             return;
         }
-        console.log('Datos insertados correctamente');
-        res.status(200).send('Datos insertados correctamente');
+        // Mostrar alerta en el navegador
+        res.send('<script>alert("Datos insertados correctamente"); window.location="/";</script>');
     });
 });
 
 // Ver la información de la BBDD
 app.get('/verficha' , (req, res) => {
     db.query('SELECT * FROM ficha', (err, rows, fields) => {
-      if (!err) {
-        res.send(rows);
-      }else {
-        console.log(err);
-        console.log("pos no funciona");
-    }
-  })
+        if (!err) {
+            res.send(rows);
+        } else {
+            console.error(err);
+            // Mostrar alerta en el navegador
+            res.send('<script>alert("Error interno del servidor"); window.location="/";</script>');
+        }
+    });
 });
 
 // Iniciar el servidor
