@@ -34,4 +34,7 @@
 - Se modifican formulario.html y server.js en ProyectoNodeJS6 para corregir errores
 
 ## 27/01/2024
-- Se raliza en ProyectoNodeJS7 y se termina
+- Se raliza el ProyectoNodeJS7 y se termina
+
+## 29/01/2024
+- Se realiza el ProyectoNodeJS8
