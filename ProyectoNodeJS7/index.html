@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Control</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        form, button {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+        }
+        #resultado {
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            font-size: 18px;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <form id="formScript" action="/ejecutar-script" method="post">
+        <button type="submit">Ejecutar Script</button>
+    </form>
+
+    <button id="mostrarDatos" onclick="mostrarDatos()">Mostrar Datos</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function mostrarDatos() {
+            fetch('/obtener-datos')
+                .then(response => response.json())
+                .then(data => {
+                    const resultadoDiv = document.getElementById('resultado');
+                    resultadoDiv.innerHTML = '<h2>Datos Obtenidos</h2>';
+                    data.forEach(dato => {
+                        resultadoDiv.innerHTML += `<p>${dato.nombre}: ${dato.CPU}</p>`;
+                    });
+                })
+                .catch(error => {
+                    console.error('Error al obtener datos de la base de datos:', error);
+                });
+        }
+    </script>
+</body>
+</html>
+

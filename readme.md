@@ -32,3 +32,6 @@
 
 ## 26/01/2024
 - Se modifican formulario.html y server.js en ProyectoNodeJS6 para corregir errores
+
+## 27/01/2024
+- Se raliza en ProyectoNodeJS7 y se termina
